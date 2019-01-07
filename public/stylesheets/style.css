@@ -2,7 +2,18 @@ myButtonSide {
   margin: 10%
 }
 
+/* myPic is a class we just added. A new class in a stylesheet starts with a dot,
+	 then the class name, then curly braces, within which the class characteristics 
+	 are lited To use the class -- e.g. for a picture, in this case --  cite it as follows: 
+	 <img class="myPic" src="/images/somePic.jpg" alt="some alt text">        */
+	 
 
+.myPic {
+	max-height: 20%;
+	max-width: 20%;
+	border-style: solid;
+	border-color: white;
+} 
 
 body {
   padding: 30px;

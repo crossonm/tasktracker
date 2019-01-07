@@ -9,7 +9,7 @@ var logger = require('morgan');
 // Database
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/test_tracker');
+var db = monk('mongodb://admin:1Dandelion@ds131903.mlab.com:31903/crossonm_data');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -23,6 +23,7 @@ app.set('views', path.join(__dirname, ''));
 app.set('view engine', 'html');
 
 app.use(logger('dev'));
+app.use(express.static('public')) //allows links to static content in the public directory ..msc
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
